@@ -1,0 +1,224 @@
+{
+  "name": "Employee Onboarding Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Onboarding form",
+        "formDescription": "\"Welcome to DevSync! Let’s set up your profile to start collaborating with other developers.\"\n\n",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Name",
+              "placeholder": "Enter Name",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Email",
+              "fieldType": "email",
+              "placeholder": "example@gmail.com",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Role",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Frontend Developer"
+                  },
+                  {
+                    "option": "Backend developer"
+                  },
+                  {
+                    "option": "Fullstack Developer"
+                  },
+                  {
+                    "option": "Ai Automation Engineer"
+                  },
+                  {
+                    "option": "Devops Engineer"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Duration",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "3 Moths"
+                  },
+                  {
+                    "option": "6 Months"
+                  }
+                ]
+              },
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false,
+          "buttonLabel": "Complete Onboarding",
+          "customCss": ":root {\n\t--font-family: 'Open Sans', sans-serif;\n\t--font-weight-normal: 400;\n\t--font-weight-bold: 600;\n\t--font-size-body: 12px;\n\t--font-size-label: 14px;\n\t--font-size-test-notice: 12px;\n\t--font-size-input: 14px;\n\t--font-size-header: 20px;\n\t--font-size-paragraph: 14px;\n\t--font-size-link: 12px;\n\t--font-size-error: 12px;\n\t--font-size-html-h1: 28px;\n\t--font-size-html-h2: 20px;\n\t--font-size-html-h3: 16px;\n\t--font-size-html-h4: 14px;\n\t--font-size-html-h5: 12px;\n\t--font-size-html-h6: 10px;\n\t--font-size-subheader: 14px;\n\t\n\t/* Colors - Purple Theme */\n\t--color-background: #0a0b14;\n\t--color-test-notice-text: #a855f7;\n\t--color-test-notice-bg: #1e1b3a;\n\t--color-test-notice-border: #4c1d95;\n\t--color-card-bg: rgba(255, 255, 255, 0.05);\n\t--color-card-border: rgba(139, 92, 246, 0.3);\n\t--color-card-shadow: rgba(139, 92, 246, 0.15);\n\t--color-link: #a855f7;\n\t--color-header: #ffffff;\n\t--color-label: #e5e7eb;\n\t--color-input-border: rgba(139, 92, 246, 0.4);\n\t--color-input-text: #ffffff; /* Default white for dropdowns */\n\t--color-input-text-dark: #000000; /* Black for text inputs */\n\t--color-focus-border: #8b5cf6;\n\t--color-submit-btn-bg:#a855f7;\n\t--color-submit-btn-text: #ffffff;\n\t--color-error: #ef4444;\n\t--color-required: #f59e0b;\n\t--color-clear-button-bg: #6b7280;\n\t--color-html-text: #e5e7eb;\n\t--color-html-link: #a855f7;\n\t--color-header-subtext: #9ca3af;\n\t\n\t/* Border Radii */\n\t--border-radius-card: 12px;\n\t--border-radius-input: 8px;\n\t--border-radius-clear-btn: 50%;\n\t--card-border-radius: 12px;\n\t\n\t/* Spacing */\n\t--padding-container-top: 32px;\n\t--padding-card: 32px;\n\t--padding-test-notice-vertical: 16px;\n\t--padding-test-notice-horizontal: 24px;\n\t--margin-bottom-card: 20px;\n\t--padding-form-input: 16px;\n\t--card-padding: 32px;\n\t--card-margin-bottom: 20px;\n\t\n\t/* Dimensions */\n\t--container-width: 448px;\n\t--submit-btn-height: 52px;\n\t--checkbox-size: 20px;\n\t\n\t/* Others */\n\t--box-shadow-card: 0px 8px 32px 0px rgba(139, 92, 246, 0.12);\n\t--opacity-placeholder: 0.6;\n}\n\n/* Text inputs (Name & Email) - Black text */\ninput[type=\"text\"], \ninput[type=\"email\"] {\n\tbackground: rgba(255, 255, 255, 0.95);\n\tborder: 2px solid rgba(139, 92, 246, 0.3);\n\tcolor: var(--color-input-text-dark) !important; /* Black text */\n\ttransition: all 0.3s ease;\n}\n\ninput[type=\"text\"]:focus, \ninput[type=\"email\"]:focus {\n\tborder-color: var(--color-focus-border);\n\tbox-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);\n\tbackground: rgba(255, 255, 255, 1);\n}\n\n/* Dropdown inputs (Role & Duration) - White text */\nselect {\n\tbackground: rgba(255, 255, 255, 0.05);\n\tborder: 2px solid rgba(139, 92, 246, 0.3);\n\tcolor: var(--color-input-text) !important; /* White text */\n\ttransition: all 0.3s ease;\n}\n\nselect:focus {\n\tborder-color: var(--color-focus-border);\n\tbox-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);\n\tbackground: rgba(255, 255, 255, 0.08);\n}\n\n/* Placeholder text styling */\ninput[type=\"text\"]::placeholder,\ninput[type=\"email\"]::placeholder {\n\tcolor: rgba(0, 0, 0, 0.5); /* Dark placeholder for light backgrounds */\n}\n\nselect option {\n\tbackground: #2d3748;\n\tcolor: white;\n}\n\n/* General input styling */\n.input-field {\n\ttransition: all 0.3s ease;\n}\n\n.submit-button {\n\tbackground: var(--color-submit-btn-bg);\n\tborder: none;\n\ttransition: all 0.3s ease;\n\tbox-shadow: 0 4px 16px rgba(139, 92, 246, 0.3);\n}\n\n.submit-button:hover {\n\ttransform: translateY(-2px);\n\tbox-shadow: 0 6px 24px rgba(139, 92, 246, 0.4);\n}\n"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a7986451-a5fd-41c1-ab26-2e5b7d8609eb",
+      "name": "On form submission",
+      "webhookId": "6c5def3a-e498-4d49-a451-dd654ed750f5"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1TxDb_VLPIopOdyOHR6mE4h63P00on8DxsO2flMeQhDM",
+          "mode": "list",
+          "cachedResultName": "Onboarding Automation",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TxDb_VLPIopOdyOHR6mE4h63P00on8DxsO2flMeQhDM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1TxDb_VLPIopOdyOHR6mE4h63P00on8DxsO2flMeQhDM/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $json.Name }}",
+            "Email": "={{ $json.Email }}",
+            "Domain": "={{ $json.Role }}",
+            "Duration": "={{ $json.Duration }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Domain",
+              "displayName": "Domain",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Duration",
+              "displayName": "Duration",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        208,
+        0
+      ],
+      "id": "b7a4e9f8-692e-4699-9d97-406e87f505b0",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "jgz33TBlBrZBg3kC",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.Email }}",
+        "subject": "Onboarding Mail",
+        "message": "=<table style=\"max-width:640px;margin:auto;border-radius:10px;overflow:hidden;font-family:'Segoe UI',sans-serif;border:1px solid #ddd;box-shadow:0 4px 20px rgba(0,0,0,0.06);\"> <tr> <td> <a href=\"https://www.devsync.in\" target=\"_blank\"> <img src=\"https://media.licdn.com/dms/image/v2/D5616AQEy3X17Bom1Ww/profile-displaybackgroundimage-shrink_350_1400/B56ZbX6HnYHUAc-/0/1747379060860?e=1752710400&v=beta&t=Ax1WedKbrkbmn9VYWA6crzlrzHNRmBgb5_mcs5PS-Vg\" alt=\"DevSync Banner\" style=\"width:100%;display:block;\" /> </a> </td> </tr> <tr> <td style=\"padding:30px 35px;\"> <h2 style=\"color:#3D2C8D;margin-top:0;\">🚀 Welcome to DevSync!</h2> <br/> <p style=\"font-size:16px;color:#333;\">Hey {{ $json.Name }},</p> <p style=\"font-size:15px;line-height:1.6;color:#444;\"> Thank you for joining the <strong>DevSync Internship Program</strong> 🎉<br> We’ve received your details and have onboarded you into our system.<br><br> If you have any questions, feel free to reach out. </p> <p style=\"font-size:14px;color:#555;margin-top:20px;\">– Team DevSync</p> </td> </tr> <tr> <td style=\"background:#f3f3f3;text-align:center;padding:18px;font-size:12px;color:#777;\"> 📧 <a href=\"mailto:devsynccareers@gmail.com\" style=\"color:#3D2C8D;text-decoration:none;\">devsynccareers@gmail.com</a> | 🌐 <a href=\"https://www.devsync.in\" target=\"_blank\" style=\"color:#3D2C8D;text-decoration:none;\">www.devsync.in</a><br/> © 2025 DevSync. All rights reserved. </td> </tr> </table>",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "1d3433bc-ab15-40df-a30c-048203c50211",
+      "name": "Send a message",
+      "webhookId": "1ee18f87-1a99-475b-be62-37b7b9f247d0",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "dwqPZROI3Bgf6Tqf",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": -1
+  },
+  "versionId": "8c324a71-80a2-4745-b23e-0168cd4a402d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "46fed2e2c65eccb48aa1440be1c07053789430c90c6772761ac95fa8b3e8d6f1"
+  },
+  "id": "CO1tE8MKPJMdJsj2",
+  "tags": []
+}
