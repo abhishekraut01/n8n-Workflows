@@ -1,0 +1,214 @@
+{
+  "name": "Property Enquiry automation from",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "Property Inquiry Form",
+        "formDescription": "Please fill out this form to inquire about our available properties. We'll get back to you within 24 hours with detailed information tailored to your needs",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Name",
+              "placeholder": "Enter first name",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "budget ",
+              "fieldType": "number",
+              "placeholder": "Enter In USD ",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "contact",
+              "fieldType": "number",
+              "placeholder": "8787878787",
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {
+          "appendAttribution": false,
+          "customCss": ":root {\n\t/* Typography */\n\t--font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif;\n\t--font-weight-normal: 400;\n\t--font-weight-medium: 500;\n\t--font-weight-bold: 600;\n\t--font-size-body: 14px;\n\t--font-size-label: 15px;\n\t--font-size-test-notice: 13px;\n\t--font-size-input: 15px;\n\t--font-size-header: 24px;\n\t--font-size-paragraph: 15px;\n\t--font-size-link: 14px;\n\t--font-size-error: 13px;\n\t--font-size-html-h1: 32px;\n\t--font-size-html-h2: 24px;\n\t--font-size-html-h3: 20px;\n\t--font-size-html-h4: 16px;\n\t--font-size-html-h5: 14px;\n\t--font-size-html-h6: 12px;\n\t--font-size-subheader: 16px;\n\t\n\t/* Light Green Real Estate Theme Colors */\n\t--color-background: #f8fdf8;\n\t--color-primary: #22c55e;\n\t--color-primary-light: #dcfce7;\n\t--color-primary-dark: #16a34a;\n\t--color-secondary: #059669;\n\t\n\t/* Notice/Alert Colors */\n\t--color-test-notice-text: #16a34a;\n\t--color-test-notice-bg: #f0fdf4;\n\t--color-test-notice-border: #bbf7d0;\n\t\n\t/* Card & Container Colors */\n\t--color-card-bg: #ffffff;\n\t--color-card-border: #d1fae5;\n\t--color-card-shadow: rgba(34, 197, 94, 0.08);\n\t\n\t/* Text Colors */\n\t--color-header: #14532d;\n\t--color-header-subtext: #166534;\n\t--color-label: #374151;\n\t--color-html-text: #374151;\n\t--color-link: #16a34a;\n\t--color-html-link: #22c55e;\n\t\n\t/* Form Input Colors */\n\t--color-input-border: #d1fae5;\n\t--color-input-text: #374151;\n\t--color-input-bg: #ffffff;\n\t--color-focus-border: #22c55e;\n\t--color-focus-shadow: rgba(34, 197, 94, 0.2);\n\t\n\t/* Button Colors */\n\t--color-submit-btn-bg: #22c55e;\n\t--color-submit-btn-text: #ffffff;\n\t--color-submit-btn-hover: #16a34a;\n\t--color-clear-button-bg: #6b7280;\n\t\n\t/* Status Colors */\n\t--color-error: #dc2626;\n\t--color-required: #ef4444;\n\t--color-success: #16a34a;\n\t--color-warning: #f59e0b;\n\t\n\t/* Border Radii - Modern & Professional */\n\t--border-radius-card: 12px;\n\t--border-radius-input: 8px;\n\t--border-radius-button: 8px;\n\t--border-radius-clear-btn: 50%;\n\t--card-border-radius: 12px;\n\t\n\t/* Spacing - Real Estate Professional */\n\t--padding-container-top: 32px;\n\t--padding-card: 32px;\n\t--padding-test-notice-vertical: 16px;\n\t--padding-test-notice-horizontal: 20px;\n\t--margin-bottom-card: 24px;\n\t--padding-form-input: 14px;\n\t--padding-form-textarea: 16px;\n\t--card-padding: 32px;\n\t--card-margin-bottom: 24px;\n\t--spacing-section: 24px;\n\t--spacing-field: 16px;\n\t\n\t/* Dimensions - Optimized for Forms */\n\t--container-width: 560px;\n\t--container-max-width: 90%;\n\t--submit-btn-height: 52px;\n\t--input-height: 48px;\n\t--textarea-min-height: 120px;\n\t--checkbox-size: 20px;\n\t--radio-size: 18px;\n\t\n\t/* Shadows & Effects */\n\t--box-shadow-card: 0px 6px 24px 0px var(--color-card-shadow);\n\t--box-shadow-input-focus: 0 0 0 3px var(--color-focus-shadow);\n\t--box-shadow-button: 0 2px 8px rgba(34, 197, 94, 0.15);\n\t--box-shadow-button-hover: 0 4px 12px rgba(34, 197, 94, 0.25);\n\t\n\t/* Transitions */\n\t--transition-default: all 0.2s ease-in-out;\n\t--transition-button: all 0.15s ease-in-out;\n\t\n\t/* Others */\n\t--opacity-placeholder: 0.6;\n\t--opacity-disabled: 0.5;\n\t--line-height-body: 1.5;\n\t--line-height-header: 1.3;\n}\n\n/* Additional Real Estate Form Styling */\n.form-container {\n\tbackground: linear-gradient(135deg, var(--color-background) 0%, #ffffff 100%);\n\tmin-height: 100vh;\n\tpadding: var(--padding-container-top) 20px;\n}\n\n.form-card {\n\tbackground: var(--color-card-bg);\n\tborder: 1px solid var(--color-card-border);\n\tborder-radius: var(--border-radius-card);\n\tbox-shadow: var(--box-shadow-card);\n\tpadding: var(--padding-card);\n\tmax-width: var(--container-width);\n\tmargin: 0 auto;\n\tposition: relative;\n}\n\n.form-header {\n\ttext-align: center;\n\tmargin-bottom: var(--spacing-section);\n\tpadding-bottom: 20px;\n\tborder-bottom: 2px solid var(--color-primary-light);\n}\n\n.form-title {\n\tcolor: var(--color-header);\n\tfont-size: var(--font-size-header);\n\tfont-weight: var(--font-weight-bold);\n\tmargin-bottom: 8px;\n\tline-height: var(--line-height-header);\n}\n\n.form-subtitle {\n\tcolor: var(--color-header-subtext);\n\tfont-size: var(--font-size-subheader);\n\tfont-weight: var(--font-weight-normal);\n\tline-height: var(--line-height-body);\n}\n\n.form-section {\n\tmargin-bottom: var(--spacing-section);\n}\n\n.form-input, .form-textarea, .form-select {\n\tborder: 2px solid var(--color-input-border);\n\tborder-radius: var(--border-radius-input);\n\tpadding: var(--padding-form-input);\n\tfont-size: var(--font-size-input);\n\tcolor: var(--color-input-text);\n\tbackground: var(--color-input-bg);\n\ttransition: var(--transition-default);\n\twidth: 100%;\n\tmin-height: var(--input-height);\n}\n\n.form-input:focus, .form-textarea:focus, .form-select:focus {\n\tborder-color: var(--color-focus-border);\n\tbox-shadow: var(--box-shadow-input-focus);\n\toutline: none;\n}\n\n.submit-button {\n\tbackground: var(--color-submit-btn-bg);\n\tcolor: var(--color-submit-btn-text);\n\tborder: none;\n\tborder-radius: var(--border-radius-button);\n\tpadding: 16px 32px;\n\tfont-size: var(--font-size-input);\n\tfont-weight: var(--font-weight-medium);\n\theight: var(--submit-btn-height);\n\twidth: 100%;\n\tcursor: pointer;\n\ttransition: var(--transition-button);\n\tbox-shadow: var(--box-shadow-button);\n}\n\n.submit-button:hover {\n\tbackground: var(--color-submit-btn-hover);\n\tbox-shadow: var(--box-shadow-button-hover);\n\ttransform: translateY(-1px);\n}\n"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a8147d21-3c69-47a7-b621-1ff4b91d1d64",
+      "name": "On form submission",
+      "webhookId": "beb1a047-7ae5-411a-bbfe-1a6c67361969"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.nationalize.io?name={{ $json.name }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        496,
+        48
+      ],
+      "id": "e684302a-3ed1-4ea1-a8b6-5de7e881817a",
+      "name": "api.nationalize.io"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.genderize.io/?name={{ $json.Name }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        -80
+      ],
+      "id": "ce1e40a2-3b23-4048-93c9-c194c8ab7179",
+      "name": "api.genderize.io"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "12P6t8_iaSqE6sK4QYs8i_-L0JY6sZCYEUEztvBiHz50",
+          "mode": "list",
+          "cachedResultName": "Property Enquiry Automation Form",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12P6t8_iaSqE6sK4QYs8i_-L0JY6sZCYEUEztvBiHz50/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/12P6t8_iaSqE6sK4QYs8i_-L0JY6sZCYEUEztvBiHz50/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Country": "={{ $json.country[0].country_id }}",
+            "Gender": "={{ $('api.genderize.io').item.json.gender }}",
+            "Name": "={{ $('On form submission').item.json.Name }}",
+            "Budget": "={{ $('On form submission').item.json[\"budget \"] }}",
+            "Contact": "={{ $('On form submission').item.json.contact }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Budget",
+              "displayName": "Budget",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Contact",
+              "displayName": "Contact",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Gender",
+              "displayName": "Gender",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Country",
+              "displayName": "Country",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        720,
+        -80
+      ],
+      "id": "a690bcae-d303-4a57-b432-140dad67aaba",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "cI5IIzaO1cX0AUPS",
+          "name": "Google Sheets account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "api.genderize.io",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "api.nationalize.io": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "api.genderize.io": {
+      "main": [
+        [
+          {
+            "node": "api.nationalize.io",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "da849fb7-bb48-4a60-a23b-6bfe071ead28",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "46fed2e2c65eccb48aa1440be1c07053789430c90c6772761ac95fa8b3e8d6f1"
+  },
+  "id": "FEllHlvBgKeUd0aZ",
+  "tags": []
+}
